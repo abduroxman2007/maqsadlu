@@ -1,0 +1,141 @@
+  :root {
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* --bg-secondary: linear-gradient(135deg, rgb(245, 247, 250) 0%, rgb(195, 207, 226) 100%); */
+    --msger-bg: #f8f9fa;
+    --border: 2px solid #33595E;
+    --left-msg-bg: white;
+    --right-msg-bg: linear-gradient(45deg,#33595E 0%, #5a8a92 130%);
+    --text-color: #072c50;
+  }
+  
+  .msger {
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 610px;
+    height: calc(100% - 5px);
+    /* margin: 25px 10px; */
+    border: var(--border);
+    border-radius: 25px;
+    background: var(--bg-secondary);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .msger-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    background: #eee;
+    color: #666;
+  }
+  
+  .msger-chat {
+    flex: 1;
+    /* overflow-x: auto; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .msger-chat::-webkit-scrollbar {
+    width: 6px;
+  }
+  .msger-chat::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+  .msger-chat::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+  }
+  .msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    /* max-width: 100%; */
+  }
+  .msg:last-of-type {
+    margin: 0;
+  }
+  .left-msg{
+    color: var(--text-color);
+  }
+
+  .msg-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  .left-msg .msg-bubble {
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--left-msg-bg);
+    border-bottom-left-radius: 0;
+  }
+  .right-msg .msg-bubble {
+    max-width: 80%;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--right-msg-bg);
+    color: white;
+    border-bottom-right-radius: 0;
+  }
+  .msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .msg-info-name {
+    /* margin-right: 10px; */
+    /* font-weight: bold; */
+    font-size: 0.75em;
+  }
+  /* .msg-info-time {
+    font-size: 0.85em;
+  } */
+  
+  .left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+    background: var(--left-msg-bg);
+  }
+  
+  .right-msg {
+    flex-direction: row-reverse;
+    /* margin-bottom: 50px; */
+  }
+  .right-msg .msg-bubble {
+    background: var(--right-msg-bg);    color: white;
+    border-bottom-right-radius: 0;
+  }
+  .right-msg .msg-img {
+    margin: 0 0 0 10px;
+    
+    /* background: size 100% !important; */
+    /* background:linear-gradient(45deg, #33595E 0%, #5a8a92 0%); */
+    /* background: var(--right-msg-bg)!important; */
+    background-image: url("/public/assets/img/graduate-hat.png"),linear-gradient(45deg, #33595E 0%, #5a8a92 130%) ;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    border-radius: 50%;
+  }
+  
+  .left-msg .msg-img {
+    background: var(--left-msg-bg);
+    margin-right: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='260.371 208.162 14.807 17.853'%3E%3Cpath d='M 271.065 218.874 C 272.124 218.874 273.144 219.318 273.909 220.113 C 274.674 220.909 275.128 221.995 275.174 223.143 L 275.178 223.337 L 275.178 224.23 C 275.178 224.68 275.021 225.114 274.738 225.444 C 274.456 225.774 274.07 225.976 273.656 226.01 L 273.532 226.015 L 262.017 226.015 C 261.601 226.015 261.201 225.844 260.896 225.538 C 260.592 225.232 260.406 224.813 260.375 224.363 L 260.371 224.23 L 260.371 223.337 C 260.371 222.186 260.78 221.081 261.514 220.251 C 262.246 219.419 263.246 218.928 264.306 218.878 L 264.484 218.874 L 271.065 218.874 Z M 267.774 208.162 C 268.865 208.162 269.911 208.633 270.682 209.469 C 271.454 210.307 271.887 211.442 271.887 212.626 C 271.887 213.81 271.454 214.945 270.682 215.781 C 269.911 216.618 268.865 217.089 267.774 217.089 C 266.683 217.089 265.638 216.618 264.865 215.781 C 264.095 214.945 263.661 213.81 263.661 212.626 C 263.661 211.442 264.095 210.307 264.865 209.469 C 265.638 208.633 266.683 208.162 267.774 208.162 Z' style='stroke-width: 1; fill: rgb(184, 135, 70);'/%3E%3C/svg%3E");
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-msg .msg-bubble,
+.right-msg .msg-bubble {
+    word-break: break-word; /* allow long words to break */
+}
+
