@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     return (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
   });
+  const [scrolled, setScrolled] = useState(false);
 
   // Sync theme with localStorage and html[data-theme]
   useEffect(() => {
@@ -23,6 +24,14 @@ const Navbar: React.FC = () => {
     if (desktopToggle) desktopToggle.checked = theme === 'dark';
     if (mobileToggle) mobileToggle.checked = theme === 'dark';
   }, [theme]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Theme toggle handler
   const handleThemeToggle = useCallback(() => {
@@ -64,21 +73,21 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-left">
           <div className="logo">
             <img className="logo-img logo-light" src="/assets/img/light-logo.png" alt="Logo" />
             <img className="logo-img logo-dark" src="/assets/img/dark-logo.png" alt="Logo" />
-            Maqsadly
+            <span>aqsadly</span>
           </div>
         </div>
         <div className="nav-center">
           <ul className="nav-menu">
             <li><a href="#home" onClick={handleNavClick}>{t('home')}</a></li>
-            <li><a href="#mission-section" onClick={handleNavClick}>{t('about')}</a></li>
-            <li><a href="#courses" onClick={handleNavClick}>{t('courses')}</a></li>
+            <li><a href="#mission" onClick={handleNavClick}>{t('about')}</a></li>
             <li><a href="#teachers" onClick={handleNavClick}>{t('teachers')}</a></li>
+            <li><a href="#courses" onClick={handleNavClick}>{t('courses')}</a></li>
             <li><a href="#contact" onClick={handleNavClick}>{t('contact')}</a></li>
           </ul>
         </div>

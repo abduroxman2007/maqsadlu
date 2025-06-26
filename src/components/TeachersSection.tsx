@@ -70,7 +70,7 @@ const TeachersSection: React.FC = () => {
           {/* Teacher 1 */}
           <div className="teacher-item" data-animate="card" data-animate-delay="100">
             <div className="teacher-image">
-              <img src="/assets/img/OlimjonUvayzov.JPG" alt="Olimjon Uvayzov" style={{ height: 600, objectFit: 'cover', borderRadius: 16 }} />
+              <img src="/assets/img/OlimjonUvayzov.JPG" alt="Olimjon Uvayzov" />
             </div>
             <div className="teacher-info">
               <h3 style={{ textAlign: 'center' }}>{t('teacher1-name')}</h3>
@@ -85,6 +85,10 @@ const TeachersSection: React.FC = () => {
           </div>
           {/* Teacher 2 */}
           <div className="teacher-item" data-animate="card" data-animate-delay="200">
+            <div className="teacher-image">
+              <img src="/assets/img/AlijonovAzizbek.JPG" alt="Azizbek Alijonov" />
+              <img className="teacher-logo-corner right" src="/assets/img/KAIST.png" alt="University Logo" />
+            </div>
             <div className="teacher-info">
               <h3 style={{ textAlign: 'center' }}>{t('teacher2-name')}</h3>
               <p className="teacher-title" style={{ textAlign: 'center' }}>{t('teacher2-title')}</p>
@@ -95,17 +99,29 @@ const TeachersSection: React.FC = () => {
                 <span className="achievement">{t('teacher2-achievement3')}</span>
               </div>
             </div>
-            <div className="teacher-image">
-              <img src="/assets/img/AlijonovAzizbek.JPG" alt="Azizbek Alijonov" style={{ height: 600, objectFit: 'cover', borderRadius: 16 }} />
-            </div>
-            <img className="teacher-logo-corner right" src="/assets/img/KAIST.png" alt="University Logo" />
           </div>
-
-          {/* Teacher 8 */}
+          {/* Teacher 3 */}
           <div className="teacher-item" data-animate="card" data-animate-delay="300">
-            <img className="teacher-logo-corner" src="/assets/img/CMUQ.png" alt="University Logo" />
             <div className="teacher-image">
-              <img src="/assets/img/Aruzhan.JPG" alt="Aruzhan" style={{height: 600, objectFit: 'cover', borderRadius: 16 }} />
+              <img src="/assets/img/Aruzhan.JPG" alt="Aruzhan" />
+              <img className="teacher-logo-corner" src="/assets/img/CMUQ.png" alt="University Logo" />
+            </div>
+            <div className="teacher-info">
+              <h3 style={{ textAlign: 'center' }}>{t('teacher3-name')}</h3>
+              <p className="teacher-title" style={{ textAlign: 'center' }}>{t('teacher3-title')}</p>
+              <p className="teacher-description" style={{ textAlign: 'left' }} dangerouslySetInnerHTML={{ __html: t('teacher3-description') }} />
+              <div className="teacher-achievements" style={{ textAlign: 'left' }}>
+                <span className="achievement">{t('teacher3-achievement1')}</span>
+                <span className="achievement">{t('teacher3-achievement2')}</span>
+                <span className="achievement">{t('teacher3-achievement3')}</span>
+              </div>
+            </div>
+          </div>
+          {/* Teacher 4 */}
+          <div className="teacher-item" data-animate="card" data-animate-delay="200">
+            <div className="teacher-image">
+              <img src="/assets/img/IMG_0913.PNG" alt="Aruzhan" />
+              <img className="teacher-logo-corner right" src="/assets/img/CMUQ.png" alt="University Logo" />
             </div>
             <div className="teacher-info">
               <h3 style={{ textAlign: 'center' }}>{t('teacher3-name')}</h3>
@@ -119,32 +135,10 @@ const TeachersSection: React.FC = () => {
             </div>
           </div>
           
-
           <div data-animate="center">
             <h2>{t('teachers-title2')}</h2>
           </div>
 
-          {/* Teacher 3 */}
-          <div className="teacher-item" data-animate="card" data-animate-delay="200">
-          <div className="teacher-info">
-              <h3 style={{ textAlign: 'center' }}>{t('teacher3-name')}</h3>
-              <p className="teacher-title" style={{ textAlign: 'center' }}>{t('teacher3-title')}</p>
-              <p className="teacher-description" style={{ textAlign: 'left' }} dangerouslySetInnerHTML={{ __html: t('teacher3-description') }} />
-              <div className="teacher-achievements" style={{ textAlign: 'left' }}>
-                <span className="achievement">{t('teacher3-achievement1')}</span>
-                <span className="achievement">{t('teacher3-achievement2')}</span>
-                <span className="achievement">{t('teacher3-achievement3')}</span>
-              </div>
-            </div>
-            <div className="teacher-image">
-              <img src="/assets/img/IMG_0913.PNG" alt="Aruzhan" style={{ height: 600, objectFit: 'cover', borderRadius: 16 }} />
-            </div>
-            <img className="teacher-logo-corner right" src="/assets/img/CMUQ.png" alt="University Logo" />
-          </div>
-          
-          <div data-animate="center">
-            <h2>{t('teachers-title2')}</h2>
-          </div>
           {/* Swiper for teachers 4+ */}
           <div className="teacherimg-swiper-section">
             <Swiper

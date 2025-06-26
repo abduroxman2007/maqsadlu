@@ -152,14 +152,22 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-color);
+  background: transparent;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
 
+/* Add background only when scrolled */
+.navbar.scrolled {
+  background: var(--bg-color);
+}
+
 [data-theme="dark"] .navbar {
+  background: transparent;
+}
+[data-theme="dark"] .navbar.scrolled {
   background: var(--bg-secondary);
 }
 
@@ -174,12 +182,17 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
 
 .nav-left .logo {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: left;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-color);
-  gap: 0.5em;
+  color: var(--deep-blue);
+}
+
+.nav-left .logo span {
+  position: relative;
+  top: -5px;
+  display: inline-block;
 }
 
 .nav-center .nav-menu {
@@ -381,7 +394,6 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-color);
 }
 .logo-img{
   height: 70px;
@@ -495,7 +507,6 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
   opacity: 1 !important;
   visibility: visible !important;
 }
-
 .hero-left h1 {
   font-size: 3.5rem;
   font-weight: 800;
@@ -563,7 +574,7 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
 }
 
 .trust-badge-icon {
-  color: #33595E;
+  color: var(--deep-blue);
   font-size: 1.2em;
   margin-right: 0.5em;
 }
@@ -809,10 +820,12 @@ body, .problems-section, .faq, .what-will-learn-section, .about, .courses, .teac
 }
 
 .achievement {
-  color: var(--text-color);
+  /* color: var(--text-color); */
+  color: white;
   font-size: 0.95rem;
   font-weight: 500;
-  background: #f7f7f7;
+  /* background: var(--secondary-color); */
+  background: var(--deep-blue);
   border-radius: 10px;
   padding: 6px 14px;
   display: inline-block;
@@ -2478,9 +2491,9 @@ button, .cta-button, .course-btn, .contact-form button, .about-form button {
   transition: transform 0.22s cubic-bezier(0.4,0,0.2,1), box-shadow 0.22s cubic-bezier(0.4,0,0.2,1);
   will-change: transform, box-shadow;
 }
-.achievement:hover, .achievement:focus,
+/* .achievement:hover, .achievement:focus, */
+/* .teacher-item:hover, .teacher-item:focus, */
 .course-card:hover, .course-card:focus,
-.teacher-item:hover, .teacher-item:focus,
 .why-card:hover, .why-card:focus,
 .faq-item-new:hover, .faq-item-new:focus {
   transform: scale(1.045) translateY(-2px);

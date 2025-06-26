@@ -20,10 +20,10 @@ function App() {
     <TranslationProvider>
       <Navbar />
       <HeroSection />
-      <TeachersSection />
       <MissionSection />
       <WhyDifferentSection />
-      <ProblemsSection />
+      <TeachersSection />
+      {/* <ProblemsSection /> */}
       <WhatWillLearnSection />
       <AboutSection />
       <CoursesSection />

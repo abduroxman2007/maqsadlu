@@ -4,7 +4,7 @@ import { useTranslation } from '../TranslationContext';
 const MissionSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="mission-section-minimal">
+    <section id='mission' className="mission-section-minimal">
       <div className="mission-container-minimal">
         <div className="mission-icon">
           <svg width="48" height="48" fill="none" stroke="#b88746" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">

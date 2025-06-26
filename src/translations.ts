@@ -11,7 +11,9 @@ export const translations = {
     contact: "Contact",
     faq: "FAQ",
     // Hero Section
-    "hero-title": "<span class='hero-accent'>Achieve</span> Your Dream SAT Score & Get Into <span class='hero-accent'>Top</span> Universities",
+    "hero-title-part1": "Achieve Your",
+    "hero-title-part2": "Dream SAT Score",
+    "hero-title-part3": "Dream University",
     "hero-subtitle": "Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide with our proven methodology.",
     "start-now": "Start Now",
     "watch-how": "Watch How It Works",
@@ -207,7 +209,9 @@ export const translations = {
     contact: "Контакты",
     faq: "FAQ",
     // Hero Section
-    "hero-title": "<span class='hero-accent'>Достигните</span> своей мечты по SAT и поступи в <span class='hero-accent'>лучшие</span> университеты",
+    "hero-title-part1": "Достигните цели",
+    "hero-title-part2": "Мечта SAT",
+    "hero-title-part3": "Мечта университет",
     "hero-subtitle": "Присоединяйтесь к тысячам студентов, которые успешно улучшили свои результаты SAT и поступили в ведущие университеты мира благодаря нашей проверенной методологии.",
     "start-now": "Начать сейчас",
     "watch-how": "Посмотреть как это работает",
@@ -395,7 +399,9 @@ export const translations = {
     contact: "Aloqa",
     faq: "FAQ",
     // Hero Section
-    "hero-title": "<span class='hero-accent'>Orzuingizdagi</span> SAT balliga erishing va eng <span  class='hero-accent'>zor</span> universitetlarga kiring",
+    "hero-title-part1": "Maqsadingizga erishing",
+    "hero-title-part2": "Orzuingizdagi SAT balli",
+    "hero-title-part3": "Eng yaxshi universitetlarga kiring",
     "hero-subtitle": "Bizning isbotlangan metodologiyamiz orqali SAT ballarini muvaffaqiyatli oshirgan va dunyoning yetakchi universitetlariga qabul qilingan minglab talabalarga qo'shiling.",
     "start-now": "Hozir boshlang",
     "watch-how": "Qanday ishlashini ko'ring",
@@ -403,8 +409,8 @@ export const translations = {
     // Mission Section
     "mission-title": "Bizning Maqsadimiz",
     "mission-description": "O'zbekistonda SAT va universitetga qabul jarayoni inqilobiy o'zgarishlarni boshdan kechirmoqda. Yetakchi universitetlar SAT ballarini majburiy qilgani sari, bizning maqsadimiz har bir ambitsiyali talabaga muvaffaqiyatga erishish uchun kerakli vositalar, yo'naltirish va ishonchni ta'minlashdir. Biz dunyo darajasidagi ta'limga kirish imkoniyati hamma uchun ochiq bo'lishi kerakligiga ishonamiz va biz sizning potensialingizni ochish va orzularingizga erishishda yordam berish uchun mavjudmiz.",
-    'mission-headline': 'Sizning kollejga yo‘lingiz shu yerdan boshlanadi',
-    'mission-subtext': 'Biz talabalarni SATga tayyorlash va qabul jarayonida ekspert strategiyalari va shaxsiy yordam bilan yo‘naltiramiz.',
+    "mission-headline": "Sizning kollejga yo'lingiz shu yerdan boshlanadi",
+    "mission-subtext": "Biz talabalarni SATga tayyorlash va qabul jarayonida ekspert strategiyalari va shaxsiy yordam bilan yo'naltiramiz.",
     // Why We Are Different Section
     "why-different-title": "Nima Uchun Biz Boshqacha",
     "why-card1-title": "Shaxsiy SAT tayyorgarligi",
