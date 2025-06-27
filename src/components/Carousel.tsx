@@ -290,7 +290,7 @@ export default function Carousel({
                   textAlign: 'center',
                 }}
               >
-                <div className="carousel-item-header" style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--secondary-color)', marginBottom: '1.2rem', marginTop: '0.5rem', borderRadius: '32px' }}>{item.title}</div>
+                <div className="carousel-item-header" style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--secondary-color)', marginBottom: '1.2rem', marginTop: '0.5rem', borderRadius: '100px' }}>{item.title}</div>
                 <div className="carousel-item-content">
                   <div className="carousel-item-title" style={{ fontWeight: 500, fontSize: '1.2rem', color: 'var(--text-color)', marginBottom: 0, lineHeight: 1.5 }}>{item.description}</div>
                 </div>
@@ -300,7 +300,8 @@ export default function Carousel({
         </AnimatePresence>
       </div>
       {/* Indicators */}
-      <div className={`carousel-indicators-container ${round ? "round" : ""}`} style={{ marginTop: '38px' }}>
+      <div className={`carousel-indicators-container ${round ? "round" : ""}`} 
+           style={{ marginTop: '120px' /* Adjusted margin to better position indicators */ }}>
         <div className="carousel-indicators">
           {items.map((_, index) => (
             <div
